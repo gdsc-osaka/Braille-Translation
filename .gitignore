@@ -1,0 +1,21 @@
+# Virtual environments
+.venv/
+venv/
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+
+# Django local files
+db.sqlite3
+*.log
+staticfiles/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Editors
+.vscode/
+.idea/
