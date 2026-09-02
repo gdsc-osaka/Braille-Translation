@@ -14,7 +14,15 @@ import os
 from pathlib import Path
 
 from django.core.exceptions import ImproperlyConfigured
+import environ
 
+
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+env = environ.Env()
+environ.Env.read_env(Path.joinpath(BASE_DIR, '.env.example'))
 
 def get_required_env(name: str) -> str:
     value = os.environ.get(name)
@@ -23,10 +31,6 @@ def get_required_env(name: str) -> str:
             f"環境変数 {name} が設定されていません。"
         )
     return value
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
