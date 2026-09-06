@@ -1,0 +1,514 @@
+[
+  {
+    "unicode": " ",
+    "unicode_flipped": " ",
+    "dots_array": [0, 0, 0, 0, 0, 0],
+    "japanese": "　",
+    "english": " ",
+    "numeric": " "
+  },
+  {
+    "unicode": "⠁",
+    "unicode_flipped": "⠈",
+    "dots_array": [1, 0, 0, 0, 0, 0],
+    "japanese": "あ",
+    "english": "a",
+    "numeric": "1"
+  },
+  {
+    "unicode": "⠂",
+    "unicode_flipped": "⠐",
+    "dots_array": [0, 1, 0, 0, 0, 0],
+    "japanese": "っ",
+    "english": ",",
+    "numeric": "."
+  },
+  {
+    "unicode": "⠃",
+    "unicode_flipped": "⠘",
+    "dots_array": [1, 1, 0, 0, 0, 0],
+    "japanese": "い",
+    "english": "b",
+    "numeric": "2"
+  },
+  {
+    "unicode": "⠄",
+    "unicode_flipped": "⠠",
+    "dots_array": [0, 0, 1, 0, 0, 0],
+    "japanese": "わ",
+    "english": "'",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠅",
+    "unicode_flipped": "⠨",
+    "dots_array": [1, 0, 1, 0, 0, 0],
+    "japanese": "な",
+    "english": "k",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠆",
+    "unicode_flipped": "⠰",
+    "dots_array": [0, 1, 1, 0, 0, 0],
+    "japanese": "ゐ",
+    "english": ";",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠇",
+    "unicode_flipped": "⠸",
+    "dots_array": [1, 1, 1, 0, 0, 0],
+    "japanese": "に",
+    "english": "l",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠈",
+    "unicode_flipped": "⠁",
+    "dots_array": [0, 0, 0, 1, 0, 0],
+    "japanese": "拗音符",
+    "english": "",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠉",
+    "unicode_flipped": "⠉",
+    "dots_array": [1, 0, 0, 1, 0, 0],
+    "japanese": "う",
+    "english": "c",
+    "numeric": "3"
+  },
+  {
+    "unicode": "⠊",
+    "unicode_flipped": "⠑",
+    "dots_array": [0, 1, 0, 1, 0, 0],
+    "japanese": "お",
+    "english": "i",
+    "numeric": "9"
+  },
+  {
+    "unicode": "⠋",
+    "unicode_flipped": "⠙",
+    "dots_array": [1, 1, 0, 1, 0, 0],
+    "japanese": "え",
+    "english": "f",
+    "numeric": "6"
+  },
+  {
+    "unicode": "⠌",
+    "unicode_flipped": "⠡",
+    "dots_array": [0, 0, 1, 1, 0, 0],
+    "japanese": "や",
+    "english": "i",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠍",
+    "unicode_flipped": "⠩",
+    "dots_array": [1, 0, 1, 1, 0, 0],
+    "japanese": "ぬ",
+    "english": "m",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠎",
+    "unicode_flipped": "⠱",
+    "dots_array": [0, 1, 1, 1, 0, 0],
+    "japanese": "の",
+    "english": "s",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠏",
+    "unicode_flipped": "⠹",
+    "dots_array": [1, 1, 1, 1, 0, 0],
+    "japanese": "ね",
+    "english": "p",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠐",
+    "unicode_flipped": "⠂",
+    "dots_array": [0, 0, 0, 0, 1, 0],
+    "japanese": "濁点",
+    "english": ",",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠑",
+    "unicode_flipped": "⠊",
+    "dots_array": [1, 0, 0, 0, 1, 0],
+    "japanese": "ら",
+    "english": "e",
+    "numeric": "5"
+  },
+  {
+    "unicode": "⠒",
+    "unicode_flipped": "⠒",
+    "dots_array": [0, 1, 0, 0, 1, 0],
+    "japanese": "ー",
+    "english": ":",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠓",
+    "unicode_flipped": "⠚",
+    "dots_array": [1, 1, 0, 0, 1, 0],
+    "japanese": "り",
+    "english": "h",
+    "numeric": "8"
+  },
+  {
+    "unicode": "⠔",
+    "unicode_flipped": "⠑",
+    "dots_array": [0, 1, 0, 1, 0, 0],
+    "japanese": "を",
+    "english": "*",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠕",
+    "unicode_flipped": "⠪",
+    "dots_array": [1, 0, 1, 0, 1, 0],
+    "japanese": "た",
+    "english": "o",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠖",
+    "unicode_flipped": "⠲",
+    "dots_array": [0, 1, 0, 0, 1, 1],
+    "japanese": "ゑ",
+    "english": "!",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠗",
+    "unicode_flipped": "⠺",
+    "dots_array": [1, 1, 1, 0, 1, 0],
+    "japanese": "ち",
+    "english": "r",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠘",
+    "unicode_flipped": "⠃",
+    "dots_array": [0, 0, 0, 1, 1, 0],
+    "japanese": "濁点符と拗音符",
+    "english": "",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠙",
+    "unicode_flipped": "⠋",
+    "dots_array": [1, 0, 0, 1, 1, 0],
+    "japanese": "る",
+    "english": "d",
+    "numeric": "4"
+  },
+  {
+    "unicode": "⠚",
+    "unicode_flipped": "⠓",
+    "dots_array": [0, 1, 0, 1, 1, 0],
+    "japanese": "ろ",
+    "english": "j",
+    "numeric": "0"
+  },
+  {
+    "unicode": "⠛",
+    "unicode_flipped": "⠛",
+    "dots_array": [1, 1, 0, 1, 1, 0],
+    "japanese": "れ",
+    "english": "g",
+    "numeric": "7"
+  },
+  {
+    "unicode": "⠜",
+    "unicode_flipped": "⠣",
+    "dots_array": [0, 0, 1, 1, 1, 0],
+    "japanese": "よ",
+    "english": "",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠝",
+    "unicode_flipped": "⠫",
+    "dots_array": [1, 0, 1, 1, 1, 0],
+    "japanese": "つ",
+    "english": "n",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠞",
+    "unicode_flipped": "⠳",
+    "dots_array": [0, 1, 1, 1, 1, 0],
+    "japanese": "と",
+    "english": "t",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠟",
+    "unicode_flipped": "⠻",
+    "dots_array": [1, 1, 1, 1, 1, 0],
+    "japanese": "て",
+    "english": "q",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠠",
+    "unicode_flipped": "⡀",
+    "dots_array": [0, 0, 0, 0, 0, 1],
+    "japanese": "半濁点符",
+    "english": "'",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠡",
+    "unicode_flipped": "⠌",
+    "dots_array": [1, 0, 0, 0, 0, 1],
+    "japanese": "か",
+    "english": "",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠢",
+    "unicode_flipped": "⠔",
+    "dots_array": [0, 1, 0, 0, 0, 1],
+    "japanese": "？",
+    "english": "",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠣",
+    "unicode_flipped": "⠜",
+    "dots_array": [1, 1, 0, 0, 0, 1],
+    "japanese": "き",
+    "english": "",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠤",
+    "unicode_flipped": "⠤",
+    "dots_array": [0, 0, 1, 0, 0, 1],
+    "japanese": "第一つなぎ符",
+    "english": "-",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠥",
+    "unicode_flipped": "⠬",
+    "dots_array": [1, 0, 1, 0, 0, 1],
+    "japanese": "は",
+    "english": "u",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠦",
+    "unicode_flipped": "⠴",
+    "dots_array": [0, 1, 1, 0, 0, 1],
+    "japanese": "外国語引用符始まり",
+    "english": "?",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠧",
+    "unicode_flipped": "⠼",
+    "dots_array": [1, 1, 1, 0, 0, 1],
+    "japanese": "ひ",
+    "english": "v",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠨",
+    "unicode_flipped": "⠅",
+    "dots_array": [0, 0, 0, 1, 0, 1],
+    "japanese": "半濁点符と拗音符",
+    "english": "",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠩",
+    "unicode_flipped": "⡉",
+    "dots_array": [1, 0, 0, 1, 0, 1],
+    "japanese": "く",
+    "english": "",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠪",
+    "unicode_flipped": "⠕",
+    "dots_array": [0, 1, 0, 1, 0, 1],
+    "japanese": "こ",
+    "english": "",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠫",
+    "unicode_flipped": "⠝",
+    "dots_array": [1, 1, 0, 1, 0, 1],
+    "japanese": "け",
+    "english": "",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠬",
+    "unicode_flipped": "⠥",
+    "dots_array": [0, 0, 1, 1, 0, 1],
+    "japanese": "ゆ",
+    "english": "",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠭",
+    "unicode_flipped": "⠭",
+    "dots_array": [1, 0, 1, 1, 0, 1],
+    "japanese": "ふ",
+    "english": "x",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠮",
+    "unicode_flipped": "⠵",
+    "dots_array": [0, 1, 1, 1, 0, 1],
+    "japanese": "ほ",
+    "english": "",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠯",
+    "unicode_flipped": "⠽",
+    "dots_array": [1, 1, 1, 1, 0, 1],
+    "japanese": "へ",
+    "english": "",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠰",
+    "unicode_flipped": "⠆",
+    "dots_array": [0, 0, 0, 0, 1, 1],
+    "japanese": "、",
+    "english": "外字符",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠱",
+    "unicode_flipped": "⠎",
+    "dots_array": [1, 0, 0, 0, 1, 1],
+    "japanese": "さ",
+    "english": "",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠲",
+    "unicode_flipped": "⠖",
+    "dots_array": [0, 1, 0, 0, 1, 1],
+    "japanese": "。",
+    "english": "!",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠳",
+    "unicode_flipped": "⠞",
+    "dots_array": [1, 1, 0, 0, 1, 1],
+    "japanese": "し",
+    "english": "",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠴",
+    "unicode_flipped": "⠦",
+    "dots_array": [0, 0, 1, 0, 1, 1],
+    "japanese": "外国語引用符終わり",
+    "english": "?",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠵",
+    "unicode_flipped": "⠮",
+    "dots_array": [1, 0, 1, 0, 1, 1],
+    "japanese": "ま",
+    "english": "z",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠶",
+    "unicode_flipped": "⠶",
+    "dots_array": [0, 1, 1, 0, 1, 1],
+    "japanese": "第1カッコ",
+    "english": "カッコ",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠷",
+    "unicode_flipped": "⠾",
+    "dots_array": [1, 1, 1, 0, 1, 1],
+    "japanese": "み",
+    "english": "",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠸",
+    "unicode_flipped": "⠇",
+    "dots_array": [0, 0, 0, 1, 1, 1],
+    "japanese": "",
+    "english": "l",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠹",
+    "unicode_flipped": "⠏",
+    "dots_array": [1, 0, 0, 1, 1, 1],
+    "japanese": "す",
+    "english": "",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠺",
+    "unicode_flipped": "⠗",
+    "dots_array": [0, 1, 0, 1, 1, 1],
+    "japanese": "そ",
+    "english": "w",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠻",
+    "unicode_flipped": "⠟",
+    "dots_array": [1, 1, 0, 1, 1, 1],
+    "japanese": "せ",
+    "english": "",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠼",
+    "unicode_flipped": "⠧",
+    "dots_array": [0, 0, 1, 1, 1, 1],
+    "japanese": "数符",
+    "english": "数符",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠽",
+    "unicode_flipped": "⠯",
+    "dots_array": [1, 0, 1, 1, 1, 1],
+    "japanese": "む",
+    "english": "y",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠾",
+    "unicode_flipped": "⠷",
+    "dots_array": [0, 1, 1, 1, 1, 1],
+    "japanese": "も",
+    "english": "",
+    "numeric": ""
+  },
+  {
+    "unicode": "⠿",
+    "unicode_flipped": "⠿",
+    "dots_array": [1, 1, 1, 1, 1, 1],
+    "japanese": "め",
+    "english": "",
+    "numeric": ""
+  }
+]
