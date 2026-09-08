@@ -131,7 +131,7 @@
     "unicode": "⠐",
     "unicode_flipped": "⠂",
     "dots_array": [0, 0, 0, 0, 1, 0],
-    "japanese": "濁点",
+    "japanese": "濁点符",
     "english": ",",
     "numeric": ""
   },
@@ -420,7 +420,7 @@
     "unicode_flipped": "⠦",
     "dots_array": [0, 0, 1, 0, 1, 1],
     "japanese": "外国語引用符終わり",
-    "english": "?",
+    "english": "",
     "numeric": ""
   },
   {
