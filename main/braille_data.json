@@ -37,7 +37,7 @@
     "dots_array": [0, 0, 1, 0, 0, 0],
     "japanese": "ワ",
     "english": "'",
-    "numeric": ""
+    "numeric": "," 
   },
   {
     "unicode": "⠅",
@@ -132,7 +132,7 @@
     "unicode_flipped": "⠂",
     "dots_array": [0, 0, 0, 0, 1, 0],
     "japanese": "濁点符",
-    "english": ",",
+    "english": "",
     "numeric": ""
   },
   {
@@ -161,10 +161,10 @@
   },
   {
     "unicode": "⠔",
-    "unicode_flipped": "⠑",
+    "unicode_flipped": "⠢",
     "dots_array": [0, 1, 0, 1, 0, 0],
     "japanese": "ヲ",
-    "english": "*",
+    "english": "",
     "numeric": ""
   },
   {
