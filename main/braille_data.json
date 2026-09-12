@@ -5,7 +5,7 @@
     "dots_array": [0, 0, 0, 0, 0, 0],
     "japanese": "　",
     "english": " ",
-    "numeric": " "
+    "numeric": ""
   },
   {
     "unicode": "⠁",
@@ -19,7 +19,7 @@
     "unicode": "⠂",
     "unicode_flipped": "⠐",
     "dots_array": [0, 1, 0, 0, 0, 0],
-    "japanese": "っ",
+    "japanese": "ッ",
     "english": ",",
     "numeric": "."
   },
@@ -162,7 +162,7 @@
   {
     "unicode": "⠔",
     "unicode_flipped": "⠢",
-    "dots_array": [0, 1, 0, 1, 0, 0],
+    "dots_array": [0, 0, 1, 0, 1, 0],
     "japanese": "ヲ",
     "english": "",
     "numeric": ""
@@ -178,7 +178,7 @@
   {
     "unicode": "⠖",
     "unicode_flipped": "⠲",
-    "dots_array": [0, 1, 0, 0, 1, 1],
+    "dots_array": [0, 1, 1, 0, 1, 0],
     "japanese": "",
     "english": "!",
     "numeric": ""
@@ -419,8 +419,8 @@
     "unicode": "⠴",
     "unicode_flipped": "⠦",
     "dots_array": [0, 0, 1, 0, 1, 1],
-    "japanese": "外国語引用符終わり",
-    "english": "",
+    "japanese": "ン",
+    "english": "外国語引用符終わり",
     "numeric": ""
   },
   {
