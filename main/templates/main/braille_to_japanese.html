@@ -1,13 +1,44 @@
+{% load static %}
 <!doctype html>
 <html lang="ja">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>点字から日本語への変換</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
 </head>
 <body>
-    <main>
-        <h1>点字から日本語への変換</h1>
+    <header>
+        <h1>点訳サイト</h1>
+    </header>
+
+    <main class="translation-page">
+        <nav class="translation-nav" aria-label="ページ切り替え">
+            <h2>点字→日本語</h2>
+            <a href="#">日本語→点字はこちら</a>
+        </nav>
+
+        <section class="translation-section" aria-labelledby="braille-input-label">
+            <h3 id="braille-input-label" class="translation-section__title">点字を入力</h3>
+            <div class="input-row">
+                <div id="braille-input" aria-label="点字入力エリア">
+                    <div class="braille-cell" aria-label="点字セル1">
+                        <span class="braille-dot">1</span>
+                        <span class="braille-dot">4</span>
+                        <span class="braille-dot">2</span>
+                        <span class="braille-dot">5</span>
+                        <span class="braille-dot">3</span>
+                        <span class="braille-dot">6</span>
+                    </div>
+                </div>
+                <button id="convert-button" type="button">変換</button>
+            </div>
+        </section>
+
+        <section class="translation-section" aria-labelledby="japanese-result-label">
+            <h3 id="japanese-result-label" class="translation-section__title">日本語</h3>
+            <div id="japanese-result" aria-live="polite"></div>
+        </section>
     </main>
 </body>
 </html>

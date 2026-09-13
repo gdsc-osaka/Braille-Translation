@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 18px 12px 24px;
+    background: #fff7d9;
+    color: #111;
+    font-family: Arial, sans-serif;
+}
+
+header h1 {
+    margin: 0 0 34px;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.translation-page {
+    width: min(100%, 700px);
+}
+
+.translation-nav {
+    display: flex;
+    align-items: center;
+    gap: 58px;
+    margin: 0 0 26px;
+}
+
+.translation-nav h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.translation-nav a {
+    color: #16008b;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.translation-section {
+    margin-bottom: 17px;
+}
+
+.translation-section__title {
+    margin: 0 0 18px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+#braille-input {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+    min-height: 190px;
+    padding: 10px 6px;
+    border: 1px solid #777;
+    background: #fff;
+}
+
+.braille-cell {
+    display: grid;
+    grid-template-columns: repeat(2, 30px);
+    grid-template-rows: repeat(3, 30px);
+    width: 60px;
+    padding: 2px;
+    border: 1px solid #777;
+}
+
+.braille-dot {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    margin: 2px;
+    border: 1px solid #777;
+    border-radius: 50%;
+    background: #fff;
+    color: #333;
+    font-size: 11px;
+}
+
+.braille-dot.is-on {
+    background: #333;
+    color: #fff;
+}
+
+#convert-button {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 0;
+    height: 28px;
+    min-height: 0;
+    padding: 3px 8px;
+    background: #fff;
+    border: 1px solid #777;
+    line-height: 18px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+@media (max-width: 620px) {
+    .translation-nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    #braille-input {
+        width: 100%;
+    }
+}
+
+#japanese-result {
+    width: 100%;
+    min-height: 108px;
+    border: 1px solid #777;
+    background: #fff;
+}
