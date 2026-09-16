@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>点字から日本語への変換</title>
-    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}?v=3">
 </head>
 <body>
     <header>
@@ -20,19 +20,43 @@
 
         <section class="translation-section" aria-labelledby="braille-input-label">
             <h3 id="braille-input-label" class="translation-section__title">点字を入力</h3>
-            <div class="input-row">
-                <div id="braille-input" aria-label="点字入力エリア">
-                    <div class="braille-cell" aria-label="点字セル1">
-                        <span class="braille-dot">1</span>
-                        <span class="braille-dot">4</span>
-                        <span class="braille-dot">2</span>
-                        <span class="braille-dot">5</span>
-                        <span class="braille-dot">3</span>
-                        <span class="braille-dot">6</span>
+            <p id="braille-input-help" class="braille-input-help">
+                数字キーの1から6で点を切り替え、Enterキーで次のセルへ進みます。
+                左右キーでセルを移動できます。Backspaceキーは、点があればすべて消去し、
+                空のセルではそのセルを削除します。
+            </p>
+            <form
+                id="braille-conversion-form"
+                action="{% url 'main:braille_to_japanese_convert' %}"
+                method="post"
+            >
+                {% csrf_token %}
+                <input id="braille-dots-payload" type="hidden" name="dots" value="[[0,0,0,0,0,0]]">
+                <div class="input-row">
+                    <div
+                        id="braille-input"
+                        role="group"
+                        tabindex="0"
+                        autofocus
+                        aria-label="点字入力エリア"
+                        aria-describedby="braille-input-help braille-input-status braille-input-error"
+                    >
                     </div>
+                    <button id="convert-button" type="submit">変換</button>
                 </div>
-                <button id="convert-button" type="button">変換</button>
-            </div>
+                <p id="braille-input-status" class="visually-hidden" aria-live="polite"></p>
+                <p id="braille-input-error" class="input-error" role="alert"></p>
+            </form>
+            <template id="braille-cell-template">
+                <div class="braille-cell">
+                    <span class="braille-dot" data-dot-number="1">1</span>
+                    <span class="braille-dot" data-dot-number="4">4</span>
+                    <span class="braille-dot" data-dot-number="2">2</span>
+                    <span class="braille-dot" data-dot-number="5">5</span>
+                    <span class="braille-dot" data-dot-number="3">3</span>
+                    <span class="braille-dot" data-dot-number="6">6</span>
+                </div>
+            </template>
         </section>
 
         <section class="translation-section" aria-labelledby="japanese-result-label">
@@ -40,5 +64,6 @@
             <div id="japanese-result" aria-live="polite"></div>
         </section>
     </main>
+    <script type="module" src="{% static 'main/js/braille_to_japanese.js' %}?v=3"></script>
 </body>
 </html>
