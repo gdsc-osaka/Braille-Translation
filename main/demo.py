@@ -1,0 +1,5 @@
+list_a = list("⠄⠕⠳⠄ ⠟⠴⠐⠳⠔ ⠜⠷⠵⠹⠲")
+str_a = str(list_a)
+str_b = "".join(list_a)
+print(str_a)
+print(str_b)
