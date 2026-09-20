@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 18px 12px 24px;
+    background: #fff7d9;
+    color: #111;
+    font-family: Arial, sans-serif;
+}
+
+.jtb-header h1 {
+    margin: 0 0 34px;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.jtb-page {
+    --jtb-action-width: 54px;
+    --jtb-action-gap: 18px;
+    width: min(100%, 700px);
+}
+
+.jtb-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 58px;
+    margin-bottom: 26px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.jtb-nav a {
+    color: #16008b;
+    font-size: 22px;
+}
+
+.jtb-section {
+    margin-bottom: 17px;
+}
+
+.jtb-label {
+    display: block;
+    margin: 0 0 18px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.jtb-row {
+    display: flex;
+    align-items: center;
+    gap: var(--jtb-action-gap);
+}
+
+.jtb-row textarea,
+.jtb-braille-output {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #777;
+    border-radius: 0;
+    background: #fff;
+    color: #111;
+    font: inherit;
+}
+
+.jtb-row textarea {
+    display: block;
+    flex: 1;
+    min-width: 0;
+    resize: none;
+    padding: 10px 6px;
+}
+
+.jtb-row textarea::placeholder,
+.jtb-output-placeholder {
+    color: #555;
+    opacity: 1;
+}
+
+.jtb-row button,
+.jtb-output-heading select {
+    border: 1px solid #777;
+    border-radius: 0;
+    background: #fff;
+    color: #111;
+    font: inherit;
+}
+
+.jtb-row button {
+    flex: 0 0 var(--jtb-action-width);
+    height: 28px;
+    padding: 3px 8px;
+    line-height: 18px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.jtb-output-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.jtb-output-heading .jtb-label {
+    margin: 0;
+}
+
+.jtb-surface-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.jtb-output-heading select {
+    padding: 1px 3px;
+}
+
+.jtb-braille-output {
+    width: calc(100% - var(--jtb-action-width) - var(--jtb-action-gap));
+    padding: 10px;
+    overflow: auto;
+    overflow-wrap: anywhere;
+}
+
+.jtb-output-placeholder {
+    margin: 0;
+}
+
+.jtb-nav a:focus-visible,
+.jtb-row textarea:focus-visible,
+.jtb-row button:focus-visible,
+.jtb-output-heading select:focus-visible {
+    outline: 2px solid #16008b;
+    outline-offset: 2px;
+}
+
+@media (max-width: 620px) {
+    .jtb-nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .jtb-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .jtb-row textarea {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .jtb-braille-output {
+        width: 100%;
+    }
+}

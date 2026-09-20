@@ -1,0 +1,57 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>日本語から点字への変換</title>
+    <link rel="stylesheet" href="{% static 'main/css/japanese_to_braille.css' %}?v=3">
+</head>
+<body>
+    <header class="jtb-header">
+        <h1>点訳サイト</h1>
+    </header>
+
+    <main class="jtb-page">
+        <nav class="jtb-nav" aria-label="ページ切り替え">
+            <strong aria-current="page">日本語→点字</strong>
+            <a href="{% url 'main:braille_to_japanese' %}">点字→日本語はこちら</a>
+        </nav>
+
+        <section class="jtb-section" aria-labelledby="jtb-input-label">
+            <label id="jtb-input-label" class="jtb-label" for="japanese-text">文章を入力</label>
+            <div class="jtb-row">
+                <textarea id="japanese-text" name="japanese_text" rows="4"></textarea>
+                <button id="japanese-convert-button" type="button">変換</button>
+            </div>
+        </section>
+
+        <section class="jtb-section" aria-labelledby="jtb-reading-label">
+            <label id="jtb-reading-label" class="jtb-label" for="japanese-reading">読み</label>
+            <div class="jtb-row">
+                <textarea
+                    id="japanese-reading"
+                    name="japanese_reading"
+                    rows="4"
+                    placeholder="ここに読みを表示します"
+                ></textarea>
+                <button id="japanese-reading-edit-button" type="button">修正</button>
+            </div>
+        </section>
+
+        <section class="jtb-section" aria-labelledby="jtb-braille-label">
+            <div class="jtb-output-heading">
+                <h2 id="jtb-braille-label" class="jtb-label">点字</h2>
+                <label class="jtb-surface-label" for="braille-surface">表示面</label>
+                <select id="braille-surface" name="braille_surface">
+                    <option value="raised">凸面（表面）</option>
+                    <option value="recessed">凹面（裏面）</option>
+                </select>
+            </div>
+            <div id="braille-output" class="jtb-braille-output" aria-live="polite">
+                <p class="jtb-output-placeholder">ここに点字を表示します</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
