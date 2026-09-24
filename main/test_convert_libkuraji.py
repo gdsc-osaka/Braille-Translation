@@ -4,6 +4,7 @@ from .converter_libkuraji import (
     convert_kanji,
     convert_kana,
     convert_braille_to_kana,
+    flip_dots,
 )
 
 
@@ -79,3 +80,10 @@ class ConverterLibkurajiTest(TestCase):
         result = convert_braille_to_kana("★")
 
         self.assertIsInstance(result, str)
+    
+    def test_flip_dots(self):
+        """点字 → 順番と向きともに反転した点字"""
+        result = flip_dots("⠄⠕⠳⠄ ⠟⠴⠐⠳⠔ ⠜⠷⠵⠹⠲")
+
+        expected = "⠖⠏⠮⠾⠣ ⠢⠞⠂⠦⠻ ⠠⠞⠪⠠"
+        self.assertEqual(result, expected)
