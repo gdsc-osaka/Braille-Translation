@@ -7,6 +7,11 @@ app_name = 'main'
 
 urlpatterns = [
     path(
+        'japanese-to-braille/',
+        views.japanese_to_braille,
+        name='japanese_to_braille',
+    ),
+    path(
         'braille-to-japanese/',
         views.braille_to_japanese,
         name='braille_to_japanese',
