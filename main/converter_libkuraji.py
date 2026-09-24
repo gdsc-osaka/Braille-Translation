@@ -38,5 +38,8 @@ def flip_dots(cell: str) -> str:
     cell_reversed = list(cell)[::-1]
     dots_list = []
     for i in cell_reversed:
-        dots_list.append(UNICODE_TO_UNICODE_FLIPPED.get(i, [0, 0, 0, 0, 0, 0]))
+        if i == "□":
+            dots_list.append(i)
+        else:
+            dots_list.append(UNICODE_TO_UNICODE_FLIPPED.get(i, [0, 0, 0, 0, 0, 0]))
     return "".join(dots_list)

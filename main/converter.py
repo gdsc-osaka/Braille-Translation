@@ -302,4 +302,12 @@ def convert_dots_to_text(dots: list[list[int]]) -> str:
                     return_text += texts
         else:
             return_text += "■"
+
+    # 文末の「。」「？」「、」の処理（後ろにスペースが無いため、ループ内では確定しない）
+    if flag_list.get("kuten"):
+        return_text += "。"
+    elif flag_list.get("gimonfu"):
+        return_text += "？"
+    elif flag_list.get("toten"):
+        return_text += "、"
     return return_text
