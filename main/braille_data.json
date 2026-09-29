@@ -257,7 +257,7 @@
   },
   {
     "unicode": "⠠",
-    "unicode_flipped": "⡀",
+    "unicode_flipped": "⠄",
     "dots_array": [0, 0, 0, 0, 0, 1],
     "japanese": "半濁点符",
     "english": "大文字符",
@@ -329,7 +329,7 @@
   },
   {
     "unicode": "⠩",
-    "unicode_flipped": "⡉",
+    "unicode_flipped": "⠍",
     "dots_array": [1, 0, 0, 1, 0, 1],
     "japanese": "ク",
     "english": "",

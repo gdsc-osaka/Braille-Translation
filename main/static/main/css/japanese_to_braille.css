@@ -166,3 +166,13 @@ body {
         width: 100%;
     }
 }
+
+.jtb-error {
+    min-height: 1.5em;
+    margin: 0;
+    color: #b00020;
+}
+
+.jtb-braille-output.is-recessed {
+    text-align: right;
+}

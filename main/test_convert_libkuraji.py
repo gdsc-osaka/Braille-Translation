@@ -1,6 +1,8 @@
 from django.test import TestCase
 
 from .converter_libkuraji import (
+    BRAILLE_DATASET,
+    UNICODE_TO_UNICODE_FLIPPED,
     convert_kanji,
     convert_kana,
     convert_braille_to_kana,
@@ -87,3 +89,54 @@ class ConverterLibkurajiTest(TestCase):
 
         expected = "⠖⠏⠮⠾⠣ ⠢⠞⠂⠦⠻ ⠠⠞⠪⠠"
         self.assertEqual(result, expected)
+    
+    def test_flip_dots_twice_returns_original(self):
+        """2回反転すると元の点字に戻ること"""
+        braille = "⠈⠪⠒⠄ ⠜⠃ ⠟⠴⠣⠐⠟⠹⠲ ⠠⠩"
+
+        result = flip_dots(flip_dots(braille))
+
+        self.assertEqual(result, braille)
+    
+    def test_flip_dots_keeps_unconvertible_mark(self):
+        """変換できなかった文字（□）はそのまま残り、位置だけ反転すること"""
+        result = flip_dots("□⠁")
+
+        self.assertEqual(result, "⠈□")
+    
+    def test_flip_dots_empty(self):
+        """空文字を渡した場合"""
+        result = flip_dots("")
+
+        self.assertEqual(result, "")
+
+
+def mirror_dots(dots):
+    """裏面から見た点の並び（1↔4、2↔5、3↔6）"""
+    return dots[3:] + dots[:3]
+
+
+def dots_to_unicode(dots):
+    """6点の並び → Unicode点字"""
+    return chr(0x2800 + sum(1 << index for index, dot in enumerate(dots) if dot))
+
+
+class BrailleDataFlipTest(TestCase):
+    """braille_data.json の unicode_flipped が正しいことを確認するテスト"""
+
+    def test_unicode_flipped_is_mirror_of_dots(self):
+        """全ての点字で、unicode_flipped が点の並びを左右反転したものになっていること"""
+        for item in BRAILLE_DATASET:
+            with self.subTest(unicode=item["unicode"]):
+                expected = (
+                    " "
+                    if item["unicode"] == " "
+                    else dots_to_unicode(mirror_dots(item["dots_array"]))
+                )
+                self.assertEqual(item["unicode_flipped"], expected)
+
+    def test_flipping_twice_returns_original(self):
+        """全ての点字で、2回反転すると元に戻ること"""
+        for original, flipped in UNICODE_TO_UNICODE_FLIPPED.items():
+            with self.subTest(unicode=original):
+                self.assertEqual(UNICODE_TO_UNICODE_FLIPPED[flipped], original)

@@ -12,7 +12,13 @@
         <h1>点訳サイト</h1>
     </header>
 
-    <main class="jtb-page">
+    <main
+        class="jtb-page"
+        data-convert-url="{% url 'main:japanese_to_braille_convert' %}"
+        data-reading-url="{% url 'main:japanese_to_braille_reading' %}"
+        data-flip-url="{% url 'main:japanese_to_braille_flip' %}"
+    >
+        {% csrf_token %}
         <nav class="jtb-nav" aria-label="ページ切り替え">
             <strong aria-current="page">日本語→点字</strong>
             <a href="{% url 'main:braille_to_japanese' %}">点字→日本語はこちら</a>
@@ -52,6 +58,8 @@
                 <p class="jtb-output-placeholder">ここに点字を表示します</p>
             </div>
         </section>
+        <p id="jtb-error" class="jtb-error" role="alert"></p>
     </main>
+    <script type="module" src="{% static 'main/js/japanese_to_braille.js' %}?v=3"></script>
 </body>
 </html>

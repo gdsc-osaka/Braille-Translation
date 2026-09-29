@@ -176,3 +176,53 @@ class BrailleToJapaneseConverterTest(TestCase):
 
         result = convert_dots_to_text(input_dots)
         self.assertEqual(result, expected_output)
+    
+    def test_converter_sentence_end_kuten(self):
+        """文末の「。」（後ろに空白が無い場合）の変換テスト"""
+        input_dots = [
+            [1, 0, 0, 0, 0, 0], [0, 1, 0, 0, 1, 1], # ア。
+        ]
+        expected_output = "ア。"
+
+        result = convert_dots_to_text(input_dots)
+        self.assertEqual(result, expected_output)
+    
+    def test_converter_sentence_end_gimonfu(self):
+        """文末の「？」（後ろに空白が無い場合）の変換テスト"""
+        input_dots = [
+            [1, 0, 0, 0, 0, 1], [0, 1, 0, 0, 0, 1], # カ？
+        ]
+        expected_output = "カ？"
+
+        result = convert_dots_to_text(input_dots)
+        self.assertEqual(result, expected_output)
+    
+    def test_converter_sentence_end_toten(self):
+        """文末の「、」（後ろに空白が無い場合）の変換テスト"""
+        input_dots = [
+            [1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1], # ア、
+        ]
+        expected_output = "ア、"
+
+        result = convert_dots_to_text(input_dots)
+        self.assertEqual(result, expected_output)
+    
+    def test_converter_kuten_in_middle(self):
+        """文中の「。」（後ろに空白がある場合）は従来どおり変換されるテスト"""
+        input_dots = [
+            [1, 0, 0, 0, 0, 0], [0, 1, 0, 0, 1, 1], [0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 1], # ア。　カ
+        ]
+        expected_output = "ア。　カ"
+
+        result = convert_dots_to_text(input_dots)
+        self.assertEqual(result, expected_output)
+    
+    def test_converter_no_sentence_end_mark(self):
+        """文末に記号が無い場合、記号が付け足されないテスト"""
+        input_dots = [
+            [1, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 1], # アカ
+        ]
+        expected_output = "アカ"
+
+        result = convert_dots_to_text(input_dots)
+        self.assertEqual(result, expected_output)
