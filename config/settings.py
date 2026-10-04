@@ -43,7 +43,8 @@ SECRET_KEY = get_required_env("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# 開発中やWorkersからのリクエストを許可
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -56,6 +57,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -91,12 +93,25 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+# Cloudflare環境（Workers上）かどうかの判定
+IS_CLOUDFLARE = os.environ.get('CLOUDFLARE_WORKERS') == 'true'
+
+if IS_CLOUDFLARE:
+    # Workers上ではD1アダプターを使用
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django_cloudflare_d1', 
+            'NAME': 'braille-db',
+        }
     }
-}
+else:
+    # ローカル開発時は普通のSQLiteを使用
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
@@ -144,3 +159,13 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+# R2 (S3互換) の設定
+AWS_ACCESS_KEY_ID = os.environ.get('R2_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('R2_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = 'braille-assets'
+AWS_S3_ENDPOINT_URL = os.environ.get('R2_ENDPOINT_URL') # https://<ACCOUNT_ID>.r2.cloudflarestorage.com
+AWS_S3_SIGNATURE_VERSION = 's3v4'
+
+# メディアファイルの配信設定
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'

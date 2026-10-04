@@ -19,3 +19,6 @@ staticfiles/
 # Editors
 .vscode/
 .idea/
+
+
+wrangler.jsonc
