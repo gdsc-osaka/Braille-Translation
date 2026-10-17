@@ -1,0 +1,4 @@
+[submodule "libkuraji"]
+    path = libkuraji
+    url = https://github.com/nishimotz/libkuraji.git
+    
