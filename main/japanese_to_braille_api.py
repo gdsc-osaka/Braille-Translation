@@ -91,4 +91,3 @@ def flip_braille(request: HttpRequest) -> JsonResponse:
             {"error": "表示面を切り替えられませんでした。"},
             status=500,
         )
-```
